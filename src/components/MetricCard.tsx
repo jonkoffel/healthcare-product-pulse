@@ -25,7 +25,7 @@ export const MetricCard = ({ value, label, icon: Icon, variant = "default", dela
       {Icon && (
         <Icon className={`w-8 h-8 mb-3 ${variant === "highlight" ? "text-metric-foreground" : "text-accent"}`} />
       )}
-      <div className="text-3xl md:text-4xl font-bold">{value}</div>
+      <div className={`text-3xl md:text-4xl font-bold ${variant === "highlight" ? "text-metric-foreground" : "text-foreground"}`}>{value}</div>
       <div className={`text-sm md:text-base ${variant === "highlight" ? "text-metric-foreground/90" : "text-muted-foreground"}`}>
         {label}
       </div>
